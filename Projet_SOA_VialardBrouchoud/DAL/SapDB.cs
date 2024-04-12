@@ -20,7 +20,7 @@ namespace DAL
 		/// </summary>
 		/// <param name="cardId"></param>
 		/// <returns>Retourn null si le cardId n'existe pas.</returns>
-        public string GetUsernameByCardId(int cardId)
+        public string GetUsernameByCardId(string cardId)
         {
 			string result = null;
 

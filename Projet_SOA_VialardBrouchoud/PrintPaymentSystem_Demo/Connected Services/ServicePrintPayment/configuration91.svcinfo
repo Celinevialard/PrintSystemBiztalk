@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="GGynY7y8XpCh7eH1b7bearJSuwSgEmG2ZEigyWYXAB4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="DgVe8tbC6tWTJ/7003yHTfoGxO0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IPrintPaymentService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IPrintPaymentService" contract="ServicePrintPayment.IPrintPaymentService" bindingType="basicHttpBinding" address="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc" bindingConfiguration="BasicHttpBinding_IPrintPaymentService">
+    <endpoint name="BasicHttpBinding_IPrintPaymentService" contract="ServicePrintPayment.IPrintPaymentService" bindingType="basicHttpBinding" address="http://localhost:8080/PrintPaymentService.svc" bindingConfiguration="BasicHttpBinding_IPrintPaymentService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc</serializedValue>
+          <serializedValue>http://localhost:8080/PrintPaymentService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

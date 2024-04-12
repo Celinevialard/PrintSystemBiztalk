@@ -1,10 +1,11 @@
-﻿namespace BLL
+﻿using DTO;
+
+namespace BLL
 {
     public interface IManager
     {
-        void AddChfByCardId(int cardId, decimal amountChf);
-        void AddChfByUsername(string username, decimal amountChf);
-        decimal GetChfbyUsername(string username);
-        decimal GetQuantityByUsername(string username);
+        QuotaReturn AddChfByCardId(string cardId, decimal amountChf);
+        QuotaReturn AddChfByUsername(string username, decimal amountChf);
+       
     }
 }

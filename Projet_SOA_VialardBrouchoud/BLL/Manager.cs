@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,14 @@ namespace BLL
         /// <param name="username"></param>
         /// <param name="amountChf"></param>
         /// <returns></returns>
-        public void AddChfByUsername(string username, decimal amountChf)
+        public QuotaReturn AddChfByUsername(string username, decimal amountChf)
         {
-            PrintAccountDb.AddChfByUsername(username, amountChf);
+            int quota = (int)ConvertChfToQuantity(amountChf);
+            return new QuotaReturn()
+            {
+                username = username,
+                quota = quota
+            };
         }
 
         /// <summary>
@@ -45,33 +51,15 @@ namespace BLL
         /// <param name="cardId"></param>
         /// <param name="amountChf"></param>
         /// <returns></returns>
-        public void AddChfByCardId(int cardId, decimal amountChf)
+        public QuotaReturn AddChfByCardId(string cardId, decimal amountChf)
         {
             string username = SapDb.GetUsernameByCardId(cardId);
-            PrintAccountDb.AddChfByUsername(username, amountChf);
+            int quota = (int) ConvertChfToQuantity(amountChf);
+            return new QuotaReturn()
+            {
+                username = username,
+                quota = quota
+            };
         }
-
-        /// <summary>
-        /// Obtenir la quantité d'impressions disponible sur le compte à partir d'un username
-        /// </summary>
-        /// <param name="username"></param>
-        /// <returns></returns>
-        public decimal GetQuantityByUsername(string username)
-        {
-            decimal amount = PrintAccountDb.GetChfByUsername(username);
-            return ConvertChfToQuantity(amount);
-        }
-
-        /// <summary>
-        /// Obtenir le montant en CHF sur le compte à partir d'un username
-        /// </summary>
-        /// <param name="username"></param>
-        /// <returns></returns>
-        public decimal GetChfbyUsername(string username)
-        {
-            return PrintAccountDb.GetChfByUsername(username);
-        }
-
-
     }
 }

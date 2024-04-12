@@ -73,13 +73,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService.wsdl" />
-    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService1.wsdl" />
+    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService2.xsd" />
+    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService21.xsd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,9 +96,6 @@
     <WCFMetadataStorage Include="Connected Services\ServicePrintPayment\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\ServicePrintPayment\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +106,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicePrintPayment\PrintPaymentService1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

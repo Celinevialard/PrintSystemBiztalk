@@ -2,6 +2,6 @@
 {
     public interface ISapDB
     {
-        string GetUsernameByCardId(int cardId);
+        string GetUsernameByCardId(string cardId);
     }
 }

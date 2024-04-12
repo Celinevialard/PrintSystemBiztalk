@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/PrintPaymentService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PrintPaymentService.xsd" MetadataType="Schema" ID="d0067ed9-2c10-43d5-add6-4219c3a7bece" SourceId="1" SourceUrl="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PrintPaymentService.wsdl" MetadataType="Wsdl" ID="9f85e09e-90cf-4320-aa9f-74bb30407a8d" SourceId="1" SourceUrl="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc?wsdl" />
-    <MetadataFile FileName="PrintPaymentService.disco" MetadataType="Disco" ID="e8bc4f4f-6cd3-4fb1-8c37-71ef02637ba7" SourceId="1" SourceUrl="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc?disco" />
-    <MetadataFile FileName="PrintPaymentService1.xsd" MetadataType="Schema" ID="d8c17644-28df-475c-8f18-d419e45c2732" SourceId="1" SourceUrl="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PrintPaymentService1.disco" MetadataType="Disco" ID="80d487c2-7c38-44cd-816d-13ce15e26f83" SourceId="1" SourceUrl="http://localhost:8080/PrintPaymentService.svc?disco" />
+    <MetadataFile FileName="PrintPaymentService2.xsd" MetadataType="Schema" ID="0ee2e95b-9810-4326-80e4-450bc571efbc" SourceId="1" SourceUrl="http://localhost:8080/PrintPaymentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PrintPaymentService21.xsd" MetadataType="Schema" ID="4193d161-b33a-4218-b074-10a20af7c3b8" SourceId="1" SourceUrl="http://localhost:8080/PrintPaymentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PrintPaymentService1.wsdl" MetadataType="Wsdl" ID="ec3298b2-e18f-4805-a0f7-cff4f140976c" SourceId="1" SourceUrl="http://localhost:8080/PrintPaymentService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
