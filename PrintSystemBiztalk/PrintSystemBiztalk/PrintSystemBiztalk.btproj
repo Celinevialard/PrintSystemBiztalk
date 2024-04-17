@@ -81,6 +81,41 @@
     </Schema>
   </ItemGroup>
   <ItemGroup>
+    <Schema Include="Schemas\PaymentDBAddMoney.xsd">
+      <TypeName>PaymentDBAddMoney</TypeName>
+      <Namespace>PrintSystemBiztalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\PayOnlineAndFacultiesAddMoney.xsd">
+      <TypeName>PayOnlineAddMoney</TypeName>
+      <Namespace>PrintSystemBiztalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\PrintSystemAddQuota.xsd">
+      <TypeName>PrintSystemAddQuota</TypeName>
+      <Namespace>PrintSystemBiztalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SAPUsers.xsd">
+      <TypeName>SAPUsers</TypeName>
+      <Namespace>PrintSystemBiztalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\PrintSystemPrint.xsd">
+      <TypeName>PrintSystemPrint</TypeName>
+      <Namespace>PrintSystemBiztalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
     <Map Include="Maps\Auth_to_AuthResponse.btm">
       <TypeName>Auth_to_AuthResponse</TypeName>
       <Namespace>PrintSystemBiztalk.Maps</Namespace>
