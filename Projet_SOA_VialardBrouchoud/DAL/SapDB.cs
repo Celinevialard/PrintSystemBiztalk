@@ -72,5 +72,55 @@ namespace DAL
             }
             return false;
         }
+
+        public bool RemoveQuota(string username, int quota)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(ConnectionString))
+                {
+                    string query = @"UPDATE SAP 
+                                       SET Quota = Quota - @QuotaToAdd
+                                       FROM SAP
+                                       WHERE Username = @Username";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("Username", username);
+                    cmd.Parameters.AddWithValue("QuotaToAdd", quota);
+
+                    cn.Open();
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public bool AddQuota(string username, int quota)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(ConnectionString))
+                {
+                    string query = @"UPDATE SAP 
+                                       SET Quota = Quota + @QuotaToAdd
+                                       FROM SAP
+                                       WHERE Username = @Username";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("Username", username);
+                    cmd.Parameters.AddWithValue("QuotaToAdd", quota);
+
+                    cn.Open();
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

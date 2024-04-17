@@ -17,6 +17,8 @@ namespace PrintPaymentSystem
         QuotaReturn AddChfByUsername(string username, decimal chf);
         [OperationContract]
         bool CreateUser(string username, string cardId);
+        [OperationContract]
+        bool RemoveQuota(string username, int quota);
 
     }
 }
