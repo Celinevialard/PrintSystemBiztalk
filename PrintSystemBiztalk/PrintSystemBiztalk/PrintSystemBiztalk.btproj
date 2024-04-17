@@ -67,18 +67,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Map Include="Maps\Map1.btm">
-      <TypeName>Map1</TypeName>
-      <Namespace>PrintSystemBiztalk.Maps</Namespace>
-      <SubType>Task</SubType>
-    </Map>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="Schemas\Schema1.xsd">
-      <TypeName>Schema1</TypeName>
+    <Schema Include="Schemas\Auth.xsd">
+      <TypeName>Auth</TypeName>
       <Namespace>PrintSystemBiztalk.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\AuthResponse.xsd">
+      <TypeName>AuthResponse</TypeName>
+      <Namespace>PrintSystemBiztalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Maps\Auth_to_AuthResponse.btm">
+      <TypeName>Auth_to_AuthResponse</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
