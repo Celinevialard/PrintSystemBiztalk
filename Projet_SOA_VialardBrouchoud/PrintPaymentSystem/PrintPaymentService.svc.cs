@@ -38,6 +38,10 @@ namespace PrintPaymentSystem
         {
             return manager.AddChfByUsername(username, chf);
         }
-        
+
+        public bool CreateUser(string username, string cardId)
+        {
+            return manager.CreateUser(username, cardId);
+        }
     }
 }

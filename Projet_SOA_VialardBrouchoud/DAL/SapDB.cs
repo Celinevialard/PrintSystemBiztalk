@@ -50,5 +50,27 @@ namespace DAL
 
 			return result;
 		}
+
+        public bool CreateUser(string username, string cardId)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(ConnectionString))
+                {
+                    string query = @"INSERT INTO SAP (Username, CardId) 
+                            values (@username, @cardId)";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@cardId", cardId);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cn.Open();
+                    return cmd.ExecuteNonQuery() >= 1;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return false;
+        }
     }
 }

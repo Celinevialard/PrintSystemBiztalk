@@ -61,5 +61,10 @@ namespace BLL
                 quota = quota
             };
         }
+
+        public bool CreateUser(string username, string cardId)
+        {
+            return SapDb.CreateUser(username, cardId);
+        }
     }
 }
