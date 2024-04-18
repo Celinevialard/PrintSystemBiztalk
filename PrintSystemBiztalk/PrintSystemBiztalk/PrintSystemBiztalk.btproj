@@ -123,6 +123,27 @@
     </Map>
   </ItemGroup>
   <ItemGroup>
+    <Schema Include="Schemas\PrintPaymentService_schemas_datacontract_org_2004_07_DTO.xsd">
+      <Namespace>PrintSystemBiztalk</Namespace>
+      <TypeName>PrintPaymentService_schemas_datacontract_org_2004_07_DTO</TypeName>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schemas\PrintPaymentService_tempuri_org.xsd">
+      <Namespace>PrintSystemBiztalk</Namespace>
+      <TypeName>PrintPaymentService_tempuri_org</TypeName>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PrintPaymentService.BindingInfo.xml" />
+    <XLang Include="PrintPaymentService.odx">
+      <TypeName>PrintPaymentService</TypeName>
+      <Namespace>PrintSystemBiztalk</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Content Include="PrintPaymentService_Custom.BindingInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <XLang Include="Orchestrations\ProcessPrint.odx">
       <TypeName>ProcessPrint</TypeName>
       <Namespace>PrintSystemBiztalk.Orchestrations</Namespace>
