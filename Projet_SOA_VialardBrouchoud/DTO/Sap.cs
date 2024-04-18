@@ -11,6 +11,7 @@ namespace DTO
         int UId { get; set; }
         int CardId { get; set; }
         string Username { get; set; }
+        int Quota { get; set; }
 
     }
 }

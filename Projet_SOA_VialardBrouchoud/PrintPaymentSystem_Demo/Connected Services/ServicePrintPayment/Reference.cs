@@ -9,35 +9,98 @@
 //------------------------------------------------------------------------------
 
 namespace PrintPaymentSystem_Demo.ServicePrintPayment {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QuotaReturn", Namespace="http://schemas.datacontract.org/2004/07/DTO")]
+    [System.SerializableAttribute()]
+    public partial class QuotaReturn : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int quotaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string usernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int quota {
+            get {
+                return this.quotaField;
+            }
+            set {
+                if ((this.quotaField.Equals(value) != true)) {
+                    this.quotaField = value;
+                    this.RaisePropertyChanged("quota");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.usernameField, value) != true)) {
+                    this.usernameField = value;
+                    this.RaisePropertyChanged("username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicePrintPayment.IPrintPaymentService")]
     public interface IPrintPaymentService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByCardId", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByCardIdResponse")]
-        void AddChfByCardId(int cardId, decimal chf);
+        PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn AddChfByCardId(string cardId, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByCardId", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByCardIdResponse")]
-        System.Threading.Tasks.Task AddChfByCardIdAsync(int cardId, decimal chf);
+        System.Threading.Tasks.Task<PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn> AddChfByCardIdAsync(string cardId, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse")]
-        void AddChfByUsername(string username, decimal chf);
+        PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn AddChfByUsername(string username, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse")]
-        System.Threading.Tasks.Task AddChfByUsernameAsync(string username, decimal chf);
+        System.Threading.Tasks.Task<PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn> AddChfByUsernameAsync(string username, decimal chf);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetQuantityByUsernameResponse")]
-        decimal GetQuantityByUsername(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/CreateUser", ReplyAction="http://tempuri.org/IPrintPaymentService/CreateUserResponse")]
+        bool CreateUser(string username, string cardId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetQuantityByUsernameResponse")]
-        System.Threading.Tasks.Task<decimal> GetQuantityByUsernameAsync(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/CreateUser", ReplyAction="http://tempuri.org/IPrintPaymentService/CreateUserResponse")]
+        System.Threading.Tasks.Task<bool> CreateUserAsync(string username, string cardId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetChfByUsernameResponse")]
-        decimal GetChfByUsername(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/RemoveQuota", ReplyAction="http://tempuri.org/IPrintPaymentService/RemoveQuotaResponse")]
+        bool RemoveQuota(string username, int quota);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetChfByUsernameResponse")]
-        System.Threading.Tasks.Task<decimal> GetChfByUsernameAsync(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/RemoveQuota", ReplyAction="http://tempuri.org/IPrintPaymentService/RemoveQuotaResponse")]
+        System.Threading.Tasks.Task<bool> RemoveQuotaAsync(string username, int quota);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,36 +130,36 @@ namespace PrintPaymentSystem_Demo.ServicePrintPayment {
                 base(binding, remoteAddress) {
         }
         
-        public void AddChfByCardId(int cardId, decimal chf) {
-            base.Channel.AddChfByCardId(cardId, chf);
+        public PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn AddChfByCardId(string cardId, decimal chf) {
+            return base.Channel.AddChfByCardId(cardId, chf);
         }
         
-        public System.Threading.Tasks.Task AddChfByCardIdAsync(int cardId, decimal chf) {
+        public System.Threading.Tasks.Task<PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn> AddChfByCardIdAsync(string cardId, decimal chf) {
             return base.Channel.AddChfByCardIdAsync(cardId, chf);
         }
         
-        public void AddChfByUsername(string username, decimal chf) {
-            base.Channel.AddChfByUsername(username, chf);
+        public PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn AddChfByUsername(string username, decimal chf) {
+            return base.Channel.AddChfByUsername(username, chf);
         }
         
-        public System.Threading.Tasks.Task AddChfByUsernameAsync(string username, decimal chf) {
+        public System.Threading.Tasks.Task<PrintPaymentSystem_Demo.ServicePrintPayment.QuotaReturn> AddChfByUsernameAsync(string username, decimal chf) {
             return base.Channel.AddChfByUsernameAsync(username, chf);
         }
         
-        public decimal GetQuantityByUsername(string username) {
-            return base.Channel.GetQuantityByUsername(username);
+        public bool CreateUser(string username, string cardId) {
+            return base.Channel.CreateUser(username, cardId);
         }
         
-        public System.Threading.Tasks.Task<decimal> GetQuantityByUsernameAsync(string username) {
-            return base.Channel.GetQuantityByUsernameAsync(username);
+        public System.Threading.Tasks.Task<bool> CreateUserAsync(string username, string cardId) {
+            return base.Channel.CreateUserAsync(username, cardId);
         }
         
-        public decimal GetChfByUsername(string username) {
-            return base.Channel.GetChfByUsername(username);
+        public bool RemoveQuota(string username, int quota) {
+            return base.Channel.RemoveQuota(username, quota);
         }
         
-        public System.Threading.Tasks.Task<decimal> GetChfByUsernameAsync(string username) {
-            return base.Channel.GetChfByUsernameAsync(username);
+        public System.Threading.Tasks.Task<bool> RemoveQuotaAsync(string username, int quota) {
+            return base.Channel.RemoveQuotaAsync(username, quota);
         }
     }
 }

@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8080/PrintPaymentService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8080/PrintPaymentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/PrintPaymentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPrintPaymentService_AddChfByCardId_InputMessage">
@@ -18,17 +19,17 @@
   <wsdl:message name="IPrintPaymentService_AddChfByUsername_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddChfByUsernameResponse" />
   </wsdl:message>
-  <wsdl:message name="IPrintPaymentService_GetQuantityByUsername_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetQuantityByUsername" />
+  <wsdl:message name="IPrintPaymentService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
   </wsdl:message>
-  <wsdl:message name="IPrintPaymentService_GetQuantityByUsername_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetQuantityByUsernameResponse" />
+  <wsdl:message name="IPrintPaymentService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IPrintPaymentService_GetChfByUsername_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetChfByUsername" />
+  <wsdl:message name="IPrintPaymentService_RemoveQuota_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveQuota" />
   </wsdl:message>
-  <wsdl:message name="IPrintPaymentService_GetChfByUsername_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetChfByUsernameResponse" />
+  <wsdl:message name="IPrintPaymentService_RemoveQuota_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveQuotaResponse" />
   </wsdl:message>
   <wsdl:portType name="IPrintPaymentService">
     <wsdl:operation name="AddChfByCardId">
@@ -39,13 +40,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/AddChfByUsername" message="tns:IPrintPaymentService_AddChfByUsername_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse" message="tns:IPrintPaymentService_AddChfByUsername_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetQuantityByUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername" message="tns:IPrintPaymentService_GetQuantityByUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsernameResponse" message="tns:IPrintPaymentService_GetQuantityByUsername_OutputMessage" />
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/CreateUser" message="tns:IPrintPaymentService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/CreateUserResponse" message="tns:IPrintPaymentService_CreateUser_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetChfByUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/GetChfByUsername" message="tns:IPrintPaymentService_GetChfByUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/GetChfByUsernameResponse" message="tns:IPrintPaymentService_GetChfByUsername_OutputMessage" />
+    <wsdl:operation name="RemoveQuota">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/RemoveQuota" message="tns:IPrintPaymentService_RemoveQuota_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/RemoveQuotaResponse" message="tns:IPrintPaymentService_RemoveQuota_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPrintPaymentService" type="tns:IPrintPaymentService">
@@ -68,8 +69,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetQuantityByUsername">
-      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername" style="document" />
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/CreateUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -77,8 +78,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetChfByUsername">
-      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/GetChfByUsername" style="document" />
+    <wsdl:operation name="RemoveQuota">
+      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/RemoveQuota" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
