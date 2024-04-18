@@ -1,0 +1,298 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="18f0079c-7100-4c6a-af76-3455622a6abf">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="PrintSystemBiztalk" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="f057c30a-a03e-4186-ade8-64a412bbf733" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IPrintPaymentService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="19440a40-7508-4917-8355-a26f11fd09e5" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;AddChfByCardId&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="AddChfByCardId" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="9357074b-13e0-47a9-9c80-92047ce28d45" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_AddChfByCardId_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IPrintPaymentService_AddChfByCardId_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/AddChfByCardId&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="53dadc6a-501d-4f76-9d4f-bafcc1c5c454" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_AddChfByCardId_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IPrintPaymentService_AddChfByCardId_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/AddChfByCardIdResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="cfd34899-20b1-4410-b00e-cccea39d0d89" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;AddChfByUsername&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="AddChfByUsername" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="9d223214-1dbf-40c9-8115-d922c742e23d" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_AddChfByUsername_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IPrintPaymentService_AddChfByUsername_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/AddChfByUsername&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="06f17a40-4f46-4286-a7e1-7030dfc114ee" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_AddChfByUsername_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IPrintPaymentService_AddChfByUsername_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="31b332e3-0b7e-4454-96cb-689c22b468d5" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;CreateUser&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="CreateUser" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="26ea845f-a247-4b03-b029-2d39bd289230" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_CreateUser_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IPrintPaymentService_CreateUser_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/CreateUser&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="60676826-18c6-482d-a9a5-242a89df56a5" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_CreateUser_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IPrintPaymentService_CreateUser_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/CreateUserResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="b67ce173-3296-4186-a1ec-d4c0e8fbabbb" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;RemoveQuota&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="RemoveQuota" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="9cbe31ee-65c4-45e9-b36d-34c7573aca6a" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_RemoveQuota_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IPrintPaymentService_RemoveQuota_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/RemoveQuota&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="2b9e52cc-d187-4ee9-946a-26b7297f1f55" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.IPrintPaymentService_RemoveQuota_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IPrintPaymentService_RemoveQuota_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IPrintPaymentService/RemoveQuotaResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="0c7fc1db-7c20-4512-9f50-38798f54ea1e" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_AddChfByCardId_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_AddChfByCardId_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="db591005-fb66-4c2b-ad76-6e12bc2e474b" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.AddChfByCardId" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="00b73395-8787-4bb5-a7ff-f1722327346e" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_AddChfByCardId_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_AddChfByCardId_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="8e439b6d-699d-4ce0-8bb1-f3ef0642894c" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.AddChfByCardIdResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="f2b479f3-fa37-4fc1-b4f7-a5f83113a9a6" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_AddChfByUsername_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_AddChfByUsername_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="246df5a8-6029-4d3b-a9c1-654618aedb70" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.AddChfByUsername" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="edf49610-d992-4e3b-9fc1-f030cac4daf4" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_AddChfByUsername_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_AddChfByUsername_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="d7894309-911d-4b84-9bc1-e1b53d879cf5" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.AddChfByUsernameResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="b6221369-14e9-44a5-b80c-47e8c4daabcd" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_CreateUser_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_CreateUser_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="9c4f1e74-dbef-4dd7-9984-6da59d93176e" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.CreateUser" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="114bcc05-7e0a-4768-9f0f-4ef307cb087b" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_CreateUser_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_CreateUser_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="9e3101e0-78f5-43ee-bd37-c4ecd4619498" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.CreateUserResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="534969d2-130b-47c0-a204-43831280e5b5" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_RemoveQuota_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_RemoveQuota_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="02283dc0-557a-4959-aa35-cace88e67c75" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.RemoveQuota" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="dba0d3be-24b2-45c2-bfc6-60bae8a3e74e" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IPrintPaymentService_RemoveQuota_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IPrintPaymentService_RemoveQuota_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="9e34207d-7c5c-44c6-a854-4534a0511f31" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.RemoveQuotaResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="a83d25c5-6e73-4cbd-9775-8454dad5f4ac" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;PrintPaymentService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="PrintPaymentServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="d33a2c66-e431-4611-b06c-aa2bb0c5974c" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module PrintSystemBiztalk
+{
+    internal messagetype IPrintPaymentService_AddChfByCardId_InputMessage
+    {
+        body PrintPaymentService_tempuri_org.AddChfByCardId parameters;
+    };
+    internal messagetype IPrintPaymentService_AddChfByCardId_OutputMessage
+    {
+        body PrintPaymentService_tempuri_org.AddChfByCardIdResponse parameters;
+    };
+    internal messagetype IPrintPaymentService_AddChfByUsername_InputMessage
+    {
+        body PrintPaymentService_tempuri_org.AddChfByUsername parameters;
+    };
+    internal messagetype IPrintPaymentService_AddChfByUsername_OutputMessage
+    {
+        body PrintPaymentService_tempuri_org.AddChfByUsernameResponse parameters;
+    };
+    internal messagetype IPrintPaymentService_CreateUser_InputMessage
+    {
+        body PrintPaymentService_tempuri_org.CreateUser parameters;
+    };
+    internal messagetype IPrintPaymentService_CreateUser_OutputMessage
+    {
+        body PrintPaymentService_tempuri_org.CreateUserResponse parameters;
+    };
+    internal messagetype IPrintPaymentService_RemoveQuota_InputMessage
+    {
+        body PrintPaymentService_tempuri_org.RemoveQuota parameters;
+    };
+    internal messagetype IPrintPaymentService_RemoveQuota_OutputMessage
+    {
+        body PrintPaymentService_tempuri_org.RemoveQuotaResponse parameters;
+    };
+    internal porttype IPrintPaymentService
+    {
+        requestresponse AddChfByCardId
+        {
+            IPrintPaymentService_AddChfByCardId_InputMessage, IPrintPaymentService_AddChfByCardId_OutputMessage
+        };
+        requestresponse AddChfByUsername
+        {
+            IPrintPaymentService_AddChfByUsername_InputMessage, IPrintPaymentService_AddChfByUsername_OutputMessage
+        };
+        requestresponse CreateUser
+        {
+            IPrintPaymentService_CreateUser_InputMessage, IPrintPaymentService_CreateUser_OutputMessage
+        };
+        requestresponse RemoveQuota
+        {
+            IPrintPaymentService_RemoveQuota_InputMessage, IPrintPaymentService_RemoveQuota_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PrintPaymentServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+
