@@ -38,6 +38,7 @@ namespace BLL
         public QuotaReturn AddChfByUsername(string username, decimal amountChf)
         {
             int quota = (int)ConvertChfToQuantity(amountChf);
+            SapDb.AddQuota(username, quota);
             return new QuotaReturn()
             {
                 username = username,
@@ -55,6 +56,7 @@ namespace BLL
         {
             string username = SapDb.GetUsernameByCardId(cardId);
             int quota = (int) ConvertChfToQuantity(amountChf);
+            SapDb.AddQuota(username, quota);
             return new QuotaReturn()
             {
                 username = username,
@@ -65,6 +67,11 @@ namespace BLL
         public bool CreateUser(string username, string cardId)
         {
             return SapDb.CreateUser(username, cardId);
+        }
+
+        public bool RemoveQuota(string username, int quota)
+        {
+            return SapDb.RemoveQuota(username, quota);
         }
     }
 }

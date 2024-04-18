@@ -43,5 +43,10 @@ namespace PrintPaymentSystem
         {
             return manager.CreateUser(username, cardId);
         }
+
+        public bool RemoveQuota(string username, int quota)
+        {
+            return manager.RemoveQuota(username, quota);
+        }
     }
 }
