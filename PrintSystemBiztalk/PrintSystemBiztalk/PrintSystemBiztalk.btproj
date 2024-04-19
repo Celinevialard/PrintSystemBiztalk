@@ -146,6 +146,11 @@
       <Namespace>PrintSystemBiztalk.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
+    <Map Include="Maps\Print_to_PrintResponse.btm">
+      <TypeName>Print_to_PrintResponse</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="PrintPaymentService.BindingInfo.xml" />
     <XLang Include="PrintPaymentService.odx">
       <TypeName>PrintPaymentService</TypeName>
@@ -153,6 +158,20 @@
       <SubType>Task</SubType>
     </XLang>
     <Content Include="PrintPaymentService_Custom.BindingInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\ProcessPrint.odx">
+      <TypeName>ProcessPrint</TypeName>
+      <Namespace>PrintSystemBiztalk.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Maps\Print_to_Auth.btm">
+      <TypeName>Print_to_Auth</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
   </ItemGroup>
   <ItemGroup>
     <None Include="PrintSystemBiztalkKey.snk" />
