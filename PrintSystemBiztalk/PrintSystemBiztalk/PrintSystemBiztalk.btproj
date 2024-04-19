@@ -135,6 +135,11 @@
     </Schema>
   </ItemGroup>
   <ItemGroup>
+    <Map Include="Maps\Print_to_PrintResponse.btm">
+      <TypeName>Print_to_PrintResponse</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="PrintPaymentService.BindingInfo.xml" />
     <XLang Include="PrintPaymentService.odx">
       <TypeName>PrintPaymentService</TypeName>
