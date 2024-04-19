@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PrintSystemBiztalkKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <Name>System</Name>
@@ -135,6 +141,11 @@
     </Schema>
   </ItemGroup>
   <ItemGroup>
+    <Map Include="Maps\SAP.btm">
+      <TypeName>SAP</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="PrintPaymentService.BindingInfo.xml" />
     <XLang Include="PrintPaymentService.odx">
       <TypeName>PrintPaymentService</TypeName>
@@ -142,6 +153,9 @@
       <SubType>Task</SubType>
     </XLang>
     <Content Include="PrintPaymentService_Custom.BindingInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PrintSystemBiztalkKey.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
