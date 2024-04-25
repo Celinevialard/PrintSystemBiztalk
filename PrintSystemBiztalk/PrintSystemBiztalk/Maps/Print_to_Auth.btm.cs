@@ -6,7 +6,7 @@ namespace PrintSystemBiztalk.Maps {
     public sealed class Print_to_Auth : global::Microsoft.XLANGs.BaseTypes.TransformBase {
         
         private const string _strMap = @"<?xml version=""1.0"" encoding=""UTF-16""?>
-<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0"" version=""1.0"" xmlns:ns0=""http://PrintSystemBiztalk.Schemas.Auth"" xmlns:s0=""http://PrintSystemBiztalk.Schemas.PrintSystemPrint"">
+<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 userCSharp"" version=""1.0"" xmlns:ns0=""http://PrintSystemBiztalk.Schemas.Auth"" xmlns:s0=""http://PrintSystemBiztalk.Schemas.PrintSystemPrint"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
   <xsl:output omit-xml-declaration=""yes"" method=""xml"" version=""1.0"" />
   <xsl:template match=""/"">
     <xsl:apply-templates select=""/s0:Print"" />
@@ -19,8 +19,21 @@ namespace PrintSystemBiztalk.Maps {
       <Password>
         <xsl:value-of select=""Password/text()"" />
       </Password>
+      <xsl:variable name=""var:v1"" select=""userCSharp:GenerateGUID()"" />
+      <RequestIdentification>
+        <xsl:value-of select=""$var:v1"" />
+      </RequestIdentification>
     </ns0:Auth>
   </xsl:template>
+  <msxsl:script language=""C#"" implements-prefix=""userCSharp""><![CDATA[
+public string GenerateGUID()
+{
+    System.Guid temp = System.Guid.NewGuid();
+    return temp.ToString();
+}
+
+
+]]></msxsl:script>
 </xsl:stylesheet>";
         
         private const int _useXSLTransform = 0;

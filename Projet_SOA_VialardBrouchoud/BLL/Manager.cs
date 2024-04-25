@@ -35,14 +35,15 @@ namespace BLL
         /// <param name="username"></param>
         /// <param name="amountChf"></param>
         /// <returns></returns>
-        public QuotaReturn AddChfByUsername(string username, decimal amountChf)
+        public QuotaReturn AddChfByUsername(Guid requestId, string username, decimal amountChf)
         {
             int quota = (int)ConvertChfToQuantity(amountChf);
             SapDb.AddQuota(username, quota);
             return new QuotaReturn()
             {
                 username = username,
-                quota = quota
+                quota = quota,
+                requestId = requestId
             };
         }
 
@@ -52,7 +53,7 @@ namespace BLL
         /// <param name="cardId"></param>
         /// <param name="amountChf"></param>
         /// <returns></returns>
-        public QuotaReturn AddChfByCardId(string cardId, decimal amountChf)
+        public QuotaReturn AddChfByCardId(Guid requestId, string cardId, decimal amountChf)
         {
             string username = SapDb.GetUsernameByCardId(cardId);
             int quota = (int) ConvertChfToQuantity(amountChf);
@@ -60,7 +61,8 @@ namespace BLL
             return new QuotaReturn()
             {
                 username = username,
-                quota = quota
+                quota = quota,
+                requestId = requestId
             };
         }
 
