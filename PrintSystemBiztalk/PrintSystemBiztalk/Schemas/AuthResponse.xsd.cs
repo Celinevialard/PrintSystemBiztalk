@@ -9,6 +9,7 @@ namespace PrintSystemBiztalk.Schemas {
     [Schema(@"http://PrintSystemBiztalk.Schemas.AuthResponse",@"AuthResponse")]
     [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.RequestIdentification), XPath = @"/*[local-name()='AuthResponse' and namespace-uri()='http://PrintSystemBiztalk.Schemas.AuthResponse']/*[local-name()='RequestIdentification' and namespace-uri()='']", XsdType = @"string")]
     [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "RequestIdentification", XPath = @"/*[local-name()='AuthResponse' and namespace-uri()='http://PrintSystemBiztalk.Schemas.AuthResponse']/*[local-name()='RequestIdentification' and namespace-uri()='']", XsdType = @"string")]
+    [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.Boolean), "IsValid", XPath = @"/*[local-name()='AuthResponse' and namespace-uri()='http://PrintSystemBiztalk.Schemas.AuthResponse']/*[local-name()='IsValid' and namespace-uri()='']", XsdType = @"boolean")]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"AuthResponse"})]
     [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PrintSystemBiztalk.PropertySchema.PropertySchema", typeof(global::PrintSystemBiztalk.PropertySchema.PropertySchema))]
@@ -33,19 +34,14 @@ namespace PrintSystemBiztalk.Schemas {
         <b:properties>
           <b:property name=""ns0:RequestIdentification"" xpath=""/*[local-name()='AuthResponse' and namespace-uri()='http://PrintSystemBiztalk.Schemas.AuthResponse']/*[local-name()='RequestIdentification' and namespace-uri()='']"" />
           <b:property distinguished=""true"" xpath=""/*[local-name()='AuthResponse' and namespace-uri()='http://PrintSystemBiztalk.Schemas.AuthResponse']/*[local-name()='RequestIdentification' and namespace-uri()='']"" />
+          <b:property distinguished=""true"" xpath=""/*[local-name()='AuthResponse' and namespace-uri()='http://PrintSystemBiztalk.Schemas.AuthResponse']/*[local-name()='IsValid' and namespace-uri()='']"" />
         </b:properties>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element name=""IsValid"">
-          <xs:complexType>
-            <xs:simpleContent>
-              <xs:extension base=""xs:boolean"" />
-            </xs:simpleContent>
-          </xs:complexType>
-        </xs:element>
         <xs:element name=""RequestIdentification"" type=""xs:string"" />
+        <xs:element name=""IsValid"" type=""xs:boolean"" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -151,6 +151,26 @@
       <Namespace>PrintSystemBiztalk.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
+    <XLang Include="Orchestrations\AddMoney.odx">
+      <TypeName>AddCredit</TypeName>
+      <Namespace>PrintSystemBiztalk.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Map Include="Maps\AddMoneyWithCardId_to_WS.btm">
+      <TypeName>AddMoneyWithCardId</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\AddMoneyWithUsername_to_WS.btm">
+      <TypeName>AddMoneyWithUsername</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\WSResponse_to_Print.btm">
+      <TypeName>WSResponse_to_Print</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="PrintPaymentService.BindingInfo.xml" />
     <XLang Include="PrintPaymentService.odx">
       <TypeName>PrintPaymentService</TypeName>

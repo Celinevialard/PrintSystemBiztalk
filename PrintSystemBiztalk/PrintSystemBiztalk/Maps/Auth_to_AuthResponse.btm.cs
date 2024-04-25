@@ -13,6 +13,9 @@ namespace PrintSystemBiztalk.Maps {
   </xsl:template>
   <xsl:template match=""/s0:Auth"">
     <ns0:AuthResponse>
+      <RequestIdentification>
+        <xsl:value-of select=""RequestIdentification/text()"" />
+      </RequestIdentification>
       <xsl:variable name=""var:v1"" select=""userCSharp:RandomBoolean()"" />
       <IsValid>
         <xsl:value-of select=""$var:v1"" />
@@ -26,7 +29,8 @@ namespace PrintSystemBiztalk.Maps {
 
 public bool RandomBoolean()
 {
-    return new System.Random().NextDouble() > 0.75;
+    //return new System.Random().NextDouble() > 0.75;
+    return true;
 }
 
 
