@@ -2,7 +2,7 @@
 #error Do not define __DESIGNER_DATA.
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
-    <om:Element Type="Module" OID="042ac668-db6e-4dcf-afca-9bcb9684fcf3" LowerBound="1.1" HigherBound="83.1">
+    <om:Element Type="Module" OID="042ac668-db6e-4dcf-afca-9bcb9684fcf3" LowerBound="1.1" HigherBound="84.1">
         <om:Property Name="ReportToAnalyst" Value="True" />
         <om:Property Name="Name" Value="PrintSystemBiztalk" />
         <om:Property Name="Signal" Value="False" />
@@ -101,42 +101,56 @@
                 </om:Element>
             </om:Element>
         </om:Element>
-        <om:Element Type="ServiceDeclaration" OID="445ee73e-45c3-477f-9a43-f54739649ec5" ParentLink="Module_ServiceDeclaration" LowerBound="41.1" HigherBound="82.1">
+        <om:Element Type="ServiceDeclaration" OID="445ee73e-45c3-477f-9a43-f54739649ec5" ParentLink="Module_ServiceDeclaration" LowerBound="43.1" HigherBound="83.1">
             <om:Property Name="InitializedTransactionType" Value="False" />
             <om:Property Name="IsInvokable" Value="False" />
             <om:Property Name="TypeModifier" Value="Internal" />
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="AddCredit" />
             <om:Property Name="Signal" Value="False" />
-            <om:Element Type="CorrelationDeclaration" OID="c4201eab-c7db-410b-9a5c-94c9a9447f72" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="52.1" HigherBound="54.1">
+            <om:Element Type="CorrelationDeclaration" OID="c4201eab-c7db-410b-9a5c-94c9a9447f72" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="54.1" HigherBound="55.1">
                 <om:Property Name="Type" Value="PrintSystemBiztalk.CorrelationWSAddMoney" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="Correlation_1" />
+                <om:Property Name="Name" Value="CorrelationSetRequestId" />
                 <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="e2632010-bdbb-4ad4-bfc6-364c2d5573c1" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="70.80" HigherBound="70.114">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="4b37a935-ef1b-4858-82e2-416aa0ec02b3" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="StatementRef" OID="321b1d89-9e2f-41c4-8672-7c193b30010b" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="72.61" HigherBound="72.84">
+                    <om:Property Name="Initializes" Value="False" />
+                    <om:Property Name="Ref" Value="5579f9d7-7a26-4442-884c-3f4888805ac7" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_2" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="61792bb9-6fb5-4d30-9248-697037e29b8e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="54.1" HigherBound="55.1">
+            <om:Element Type="MessageDeclaration" OID="61792bb9-6fb5-4d30-9248-697037e29b8e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="55.1" HigherBound="56.1">
                 <om:Property Name="Type" Value="PrintSystemBiztalk.Schemas.PaymentDBAddMoney" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="msgAddMoneyWithCardId" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="47e74e7f-4531-4bf1-a19c-56f2444e394d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="55.1" HigherBound="56.1">
+            <om:Element Type="MessageDeclaration" OID="47e74e7f-4531-4bf1-a19c-56f2444e394d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="56.1" HigherBound="57.1">
                 <om:Property Name="Type" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.AddChfByCardId" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="msgAddMoneyWithCardIdResponse" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="6ddcd9de-b0ff-453d-9534-b3a25a9ab097" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="56.1" HigherBound="57.1">
+            <om:Element Type="MessageDeclaration" OID="6ddcd9de-b0ff-453d-9534-b3a25a9ab097" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="57.1" HigherBound="58.1">
                 <om:Property Name="Type" Value="PrintSystemBiztalk.PrintPaymentService_tempuri_org.AddChfByCardIdResponse" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="msgWSResponse" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="91594461-42e1-40c5-9b34-e8bed968e461" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="57.1" HigherBound="58.1">
+            <om:Element Type="MessageDeclaration" OID="91594461-42e1-40c5-9b34-e8bed968e461" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="58.1" HigherBound="59.1">
                 <om:Property Name="Type" Value="PrintSystemBiztalk.Schemas.PrintSystemAddQuota" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
@@ -145,7 +159,7 @@
             </om:Element>
             <om:Element Type="ServiceBody" OID="625bb89b-ff86-455d-beca-e02a694b20c9" ParentLink="ServiceDeclaration_ServiceBody">
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="Receive" OID="b6233f00-0968-4c29-8a77-556176e61e9c" ParentLink="ServiceBody_Statement" LowerBound="60.1" HigherBound="62.1">
+                <om:Element Type="Receive" OID="b6233f00-0968-4c29-8a77-556176e61e9c" ParentLink="ServiceBody_Statement" LowerBound="61.1" HigherBound="63.1">
                     <om:Property Name="Activate" Value="True" />
                     <om:Property Name="PortName" Value="PaymentDB" />
                     <om:Property Name="MessageName" Value="msgAddMoneyWithCardId" />
@@ -155,35 +169,35 @@
                     <om:Property Name="Name" Value="ReceiveAddMoneyWithCardId" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Construct" OID="3e49b9bc-0225-485d-ad1d-d251e43a258c" ParentLink="ServiceBody_Statement" LowerBound="62.1" HigherBound="68.1">
+                <om:Element Type="Construct" OID="3e49b9bc-0225-485d-ad1d-d251e43a258c" ParentLink="ServiceBody_Statement" LowerBound="63.1" HigherBound="69.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="ConstructMsgPaymentDB" />
                     <om:Property Name="Signal" Value="True" />
-                    <om:Element Type="Transform" OID="1daf55ac-1709-4222-bde1-2ecfeca47f0d" ParentLink="ComplexStatement_Statement" LowerBound="65.1" HigherBound="67.1">
+                    <om:Element Type="Transform" OID="1daf55ac-1709-4222-bde1-2ecfeca47f0d" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
                         <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.AddMoneyWithCardId" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Transform_1" />
                         <om:Property Name="Signal" Value="False" />
-                        <om:Element Type="MessagePartRef" OID="40ad1de8-6840-4269-bd91-49fe53571b5e" ParentLink="Transform_InputMessagePartRef" LowerBound="66.105" HigherBound="66.126">
+                        <om:Element Type="MessagePartRef" OID="40ad1de8-6840-4269-bd91-49fe53571b5e" ParentLink="Transform_InputMessagePartRef" LowerBound="67.105" HigherBound="67.126">
                             <om:Property Name="MessageRef" Value="msgAddMoneyWithCardId" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_1" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="b9d50c81-ab9a-410f-b340-c638a8a554e3" ParentLink="Transform_OutputMessagePartRef" LowerBound="66.28" HigherBound="66.57">
+                        <om:Element Type="MessagePartRef" OID="b9d50c81-ab9a-410f-b340-c638a8a554e3" ParentLink="Transform_OutputMessagePartRef" LowerBound="67.28" HigherBound="67.57">
                             <om:Property Name="MessageRef" Value="msgAddMoneyWithCardIdResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_2" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
                     </om:Element>
-                    <om:Element Type="MessageRef" OID="19f84c92-ebe6-4510-9571-5bd980c74da2" ParentLink="Construct_MessageRef" LowerBound="63.23" HigherBound="63.52">
+                    <om:Element Type="MessageRef" OID="19f84c92-ebe6-4510-9571-5bd980c74da2" ParentLink="Construct_MessageRef" LowerBound="64.23" HigherBound="64.52">
                         <om:Property Name="Ref" Value="msgAddMoneyWithCardIdResponse" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Signal" Value="False" />
                     </om:Element>
                 </om:Element>
-                <om:Element Type="Send" OID="4b37a935-ef1b-4858-82e2-416aa0ec02b3" ParentLink="ServiceBody_Statement" LowerBound="68.1" HigherBound="70.1">
+                <om:Element Type="Send" OID="4b37a935-ef1b-4858-82e2-416aa0ec02b3" ParentLink="ServiceBody_Statement" LowerBound="69.1" HigherBound="71.1">
                     <om:Property Name="PortName" Value="SendWSWithCardId" />
                     <om:Property Name="MessageName" Value="msgAddMoneyWithCardIdResponse" />
                     <om:Property Name="OperationName" Value="Operation_1" />
@@ -192,7 +206,7 @@
                     <om:Property Name="Name" Value="SendWS" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Receive" OID="5579f9d7-7a26-4442-884c-3f4888805ac7" ParentLink="ServiceBody_Statement" LowerBound="70.1" HigherBound="72.1">
+                <om:Element Type="Receive" OID="5579f9d7-7a26-4442-884c-3f4888805ac7" ParentLink="ServiceBody_Statement" LowerBound="71.1" HigherBound="73.1">
                     <om:Property Name="Activate" Value="False" />
                     <om:Property Name="PortName" Value="WSResponse" />
                     <om:Property Name="MessageName" Value="msgWSResponse" />
@@ -202,35 +216,35 @@
                     <om:Property Name="Name" Value="WSResponse" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Construct" OID="69e421f9-36d3-4313-872d-6110eb18592f" ParentLink="ServiceBody_Statement" LowerBound="72.1" HigherBound="78.1">
+                <om:Element Type="Construct" OID="69e421f9-36d3-4313-872d-6110eb18592f" ParentLink="ServiceBody_Statement" LowerBound="73.1" HigherBound="79.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="ConstructMessage_1" />
                     <om:Property Name="Signal" Value="False" />
-                    <om:Element Type="Transform" OID="83f5d9a7-8801-4ae5-94cb-7a2bc15a40e6" ParentLink="ComplexStatement_Statement" LowerBound="75.1" HigherBound="77.1">
+                    <om:Element Type="Transform" OID="83f5d9a7-8801-4ae5-94cb-7a2bc15a40e6" ParentLink="ComplexStatement_Statement" LowerBound="76.1" HigherBound="78.1">
                         <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSResponse_to_Print" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="WSResponseToPrint" />
                         <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessagePartRef" OID="7a4fa787-6f82-4829-b23b-37520d617947" ParentLink="Transform_InputMessagePartRef" LowerBound="76.85" HigherBound="76.98">
+                        <om:Element Type="MessagePartRef" OID="7a4fa787-6f82-4829-b23b-37520d617947" ParentLink="Transform_InputMessagePartRef" LowerBound="77.85" HigherBound="77.98">
                             <om:Property Name="MessageRef" Value="msgWSResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_3" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="eb278673-51b8-4853-998a-f3c4de312669" ParentLink="Transform_OutputMessagePartRef" LowerBound="76.28" HigherBound="76.36">
+                        <om:Element Type="MessagePartRef" OID="eb278673-51b8-4853-998a-f3c4de312669" ParentLink="Transform_OutputMessagePartRef" LowerBound="77.28" HigherBound="77.36">
                             <om:Property Name="MessageRef" Value="msgPrint" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_4" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
                     </om:Element>
-                    <om:Element Type="MessageRef" OID="3b448210-3128-46ca-ad57-634104225ee7" ParentLink="Construct_MessageRef" LowerBound="73.23" HigherBound="73.31">
+                    <om:Element Type="MessageRef" OID="3b448210-3128-46ca-ad57-634104225ee7" ParentLink="Construct_MessageRef" LowerBound="74.23" HigherBound="74.31">
                         <om:Property Name="Ref" Value="msgPrint" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Signal" Value="False" />
                     </om:Element>
                 </om:Element>
-                <om:Element Type="Send" OID="fb43079d-b1a0-4075-8df4-7c1713e041b4" ParentLink="ServiceBody_Statement" LowerBound="78.1" HigherBound="80.1">
+                <om:Element Type="Send" OID="fb43079d-b1a0-4075-8df4-7c1713e041b4" ParentLink="ServiceBody_Statement" LowerBound="79.1" HigherBound="81.1">
                     <om:Property Name="PortName" Value="SendPrintSystem" />
                     <om:Property Name="MessageName" Value="msgPrint" />
                     <om:Property Name="OperationName" Value="Operation_1" />
@@ -240,7 +254,7 @@
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
             </om:Element>
-            <om:Element Type="PortDeclaration" OID="89d625fe-898b-4a29-8524-b0c4cfd5235f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="44.1" HigherBound="46.1">
+            <om:Element Type="PortDeclaration" OID="89d625fe-898b-4a29-8524-b0c4cfd5235f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="46.1" HigherBound="48.1">
                 <om:Property Name="PortModifier" Value="Implements" />
                 <om:Property Name="Orientation" Value="Left" />
                 <om:Property Name="PortIndex" Value="-1" />
@@ -252,11 +266,11 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="PaymentDB" />
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="LogicalBindingAttribute" OID="1df11df4-11cd-4561-a0df-b81a9ba97901" ParentLink="PortDeclaration_CLRAttribute" LowerBound="44.1" HigherBound="45.1">
+                <om:Element Type="LogicalBindingAttribute" OID="1df11df4-11cd-4561-a0df-b81a9ba97901" ParentLink="PortDeclaration_CLRAttribute" LowerBound="46.1" HigherBound="47.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
-            <om:Element Type="PortDeclaration" OID="889f85f6-0219-4efc-82ce-3f52f8b3bdbb" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="46.1" HigherBound="48.1">
+            <om:Element Type="PortDeclaration" OID="889f85f6-0219-4efc-82ce-3f52f8b3bdbb" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="48.1" HigherBound="50.1">
                 <om:Property Name="PortModifier" Value="Uses" />
                 <om:Property Name="Orientation" Value="Right" />
                 <om:Property Name="PortIndex" Value="-1" />
@@ -268,11 +282,11 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="SendWSWithCardId" />
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="LogicalBindingAttribute" OID="d7357e3f-aee5-43cd-8ac7-f76d4d88f24b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="46.1" HigherBound="47.1">
+                <om:Element Type="LogicalBindingAttribute" OID="d7357e3f-aee5-43cd-8ac7-f76d4d88f24b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="48.1" HigherBound="49.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
-            <om:Element Type="PortDeclaration" OID="ff0d888d-fbcb-4dff-b9a9-7a67b3ec9bff" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="48.1" HigherBound="50.1">
+            <om:Element Type="PortDeclaration" OID="ff0d888d-fbcb-4dff-b9a9-7a67b3ec9bff" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="50.1" HigherBound="52.1">
                 <om:Property Name="PortModifier" Value="Implements" />
                 <om:Property Name="Orientation" Value="Left" />
                 <om:Property Name="PortIndex" Value="-1" />
@@ -284,11 +298,11 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="WSResponse" />
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="LogicalBindingAttribute" OID="3208812c-9b65-4585-ae11-5013c3ace2f3" ParentLink="PortDeclaration_CLRAttribute" LowerBound="48.1" HigherBound="49.1">
+                <om:Element Type="LogicalBindingAttribute" OID="3208812c-9b65-4585-ae11-5013c3ace2f3" ParentLink="PortDeclaration_CLRAttribute" LowerBound="50.1" HigherBound="51.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
-            <om:Element Type="PortDeclaration" OID="c05ecb3c-7199-47e8-8a95-2ffab4ac3d0e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="50.1" HigherBound="52.1">
+            <om:Element Type="PortDeclaration" OID="c05ecb3c-7199-47e8-8a95-2ffab4ac3d0e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="52.1" HigherBound="54.1">
                 <om:Property Name="PortModifier" Value="Uses" />
                 <om:Property Name="Orientation" Value="Right" />
                 <om:Property Name="PortIndex" Value="-1" />
@@ -300,16 +314,22 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="SendPrintSystem" />
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="LogicalBindingAttribute" OID="c30749a5-5f93-4a50-a349-2a1bde423a5f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="50.1" HigherBound="51.1">
+                <om:Element Type="LogicalBindingAttribute" OID="c30749a5-5f93-4a50-a349-2a1bde423a5f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="52.1" HigherBound="53.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
         </om:Element>
-        <om:Element Type="CorrelationType" OID="46bbd0bb-03d4-42ca-a6f6-7d23a3bcfea9" ParentLink="Module_CorrelationType" LowerBound="39.1" HigherBound="41.1">
+        <om:Element Type="CorrelationType" OID="46bbd0bb-03d4-42ca-a6f6-7d23a3bcfea9" ParentLink="Module_CorrelationType" LowerBound="39.1" HigherBound="43.1">
             <om:Property Name="TypeModifier" Value="Internal" />
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="CorrelationWSAddMoney" />
             <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="90555b33-1ecd-4bb0-ba81-2cd6f249a2dc" ParentLink="CorrelationType_PropertyRef" LowerBound="41.9" HigherBound="41.33">
+                <om:Property Name="Ref" Value="PrintSystemBiztalk.PropertySchema.requestId" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
         </om:Element>
     </om:Element>
 </om:MetaModel>
@@ -352,8 +372,10 @@ module PrintSystemBiztalk
             Schemas.PrintSystemAddQuota
         };
     };
-
-#error "No Correlation Properties."
+    internal correlationtype CorrelationWSAddMoney
+    {
+        PropertySchema.requestId
+    };
     [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
     internal service AddCredit
     {
@@ -365,8 +387,7 @@ module PrintSystemBiztalk
         port implements PortType_10 WSResponse;
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
         port uses PortType_11 SendPrintSystem;
-
-#error "No Correlation Properties."
+        correlation CorrelationWSAddMoney CorrelationSetRequestId;
         message Schemas.PaymentDBAddMoney msgAddMoneyWithCardId;
         message PrintPaymentService_tempuri_org.AddChfByCardId msgAddMoneyWithCardIdResponse;
         message PrintPaymentService_tempuri_org.AddChfByCardIdResponse msgWSResponse;
@@ -382,9 +403,9 @@ module PrintSystemBiztalk
                 transform (msgAddMoneyWithCardIdResponse) = PrintSystemBiztalk.Maps.AddMoneyWithCardId (msgAddMoneyWithCardId);
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("4b37a935-ef1b-4858-82e2-416aa0ec02b3")]
-            send (SendWSWithCardId.Operation_1, msgAddMoneyWithCardIdResponse);
+            send (SendWSWithCardId.Operation_1, msgAddMoneyWithCardIdResponse, initialize CorrelationSetRequestId);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("5579f9d7-7a26-4442-884c-3f4888805ac7")]
-            receive (WSResponse.Operation_1, msgWSResponse);
+            receive (WSResponse.Operation_1, msgWSResponse, CorrelationSetRequestId);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("69e421f9-36d3-4313-872d-6110eb18592f")]
             construct msgPrint
             {

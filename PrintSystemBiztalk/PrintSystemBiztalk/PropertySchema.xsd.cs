@@ -7,7 +7,7 @@ namespace PrintSystemBiztalk.PropertySchema {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Property)]
     [System.SerializableAttribute()]
-    [SchemaRoots(new string[] {@"Property1", @"RequestIdentification"})]
+    [SchemaRoots(new string[] {@"Property1", @"RequestIdentification", @"requestId"})]
     public sealed class PropertySchema : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
@@ -35,6 +35,13 @@ namespace PrintSystemBiztalk.PropertySchema {
       </xs:appinfo>
     </xs:annotation>
   </xs:element>
+  <xs:element name=""requestId"" type=""xs:string"">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:fieldInfo propertyGuid=""54589226-05ee-4b5e-af48-29beea50cf08"" />
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
 </xs:schema>";
         
         public PropertySchema() {
@@ -48,9 +55,10 @@ namespace PrintSystemBiztalk.PropertySchema {
         
         public override string[] RootNodes {
             get {
-                string[] _RootElements = new string [2];
+                string[] _RootElements = new string [3];
                 _RootElements[0] = "Property1";
                 _RootElements[1] = "RequestIdentification";
+                _RootElements[2] = "requestId";
                 return _RootElements;
             }
         }
@@ -105,6 +113,36 @@ namespace PrintSystemBiztalk.PropertySchema {
         
         [System.NonSerializedAttribute()]
         private static System.Xml.XmlQualifiedName _QName = new System.Xml.XmlQualifiedName(@"RequestIdentification", @"https://PrintSystemBiztalk.PropertySchema");
+        
+        private static string PropertyValueType {
+            get {
+                throw new System.NotSupportedException();
+            }
+        }
+        
+        public override System.Xml.XmlQualifiedName Name {
+            get {
+                return _QName;
+            }
+        }
+        
+        public override System.Type Type {
+            get {
+                return typeof(string);
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [System.SerializableAttribute()]
+    [PropertyType(@"requestId",@"https://PrintSystemBiztalk.PropertySchema","string","System.String")]
+    [PropertyGuidAttribute(@"54589226-05ee-4b5e-af48-29beea50cf08")]
+    public sealed class requestId : Microsoft.XLANGs.BaseTypes.MessageDataPropertyBase {
+        
+        [System.NonSerializedAttribute()]
+        private static System.Xml.XmlQualifiedName _QName = new System.Xml.XmlQualifiedName(@"requestId", @"https://PrintSystemBiztalk.PropertySchema");
         
         private static string PropertyValueType {
             get {

@@ -6,9 +6,13 @@ namespace PrintSystemBiztalk {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
+    [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "requestId", XPath = @"/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByCardIdResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByCardIdResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']", XsdType = @"string")]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"AddChfByCardId", @"AddChfByCardIdResponse", @"AddChfByUsername", @"AddChfByUsernameResponse", @"CreateUser", @"CreateUserResponse", @"RemoveQuota", @"RemoveQuotaResponse"})]
     [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PrintSystemBiztalk.PrintPaymentService_schemas_datacontract_org_2004_07_DTO", typeof(global::PrintSystemBiztalk.PrintPaymentService_schemas_datacontract_org_2004_07_DTO))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PrintSystemBiztalk.PropertySchema.PropertySchema", typeof(global::PrintSystemBiztalk.PropertySchema.PropertySchema))]
     public sealed class PrintPaymentService_tempuri_org : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
@@ -16,24 +20,43 @@ namespace PrintSystemBiztalk {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" elementFormDefault=""qualified"" targetNamespace=""http://tempuri.org/"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns:ns1=""http://tempuri.org/"" xmlns:ns0=""https://PrintSystemBiztalk.PropertySchema"" elementFormDefault=""qualified"" targetNamespace=""http://tempuri.org/"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:import schemaLocation=""PrintSystemBiztalk.PrintPaymentService_schemas_datacontract_org_2004_07_DTO"" namespace=""http://schemas.datacontract.org/2004/07/DTO"" />
   <xs:annotation>
     <xs:appinfo>
-      <references xmlns=""http://schemas.microsoft.com/BizTalk/2003"">
-        <reference targetNamespace=""http://schemas.datacontract.org/2004/07/DTO"" />
-      </references>
+      <b:references>
+        <b:reference targetNamespace=""http://schemas.datacontract.org/2004/07/DTO"" />
+      </b:references>
+      <b:imports>
+        <b:namespace prefix=""ns0"" uri=""https://PrintSystemBiztalk.PropertySchema"" location=""PrintSystemBiztalk.PropertySchema.PropertySchema"" />
+      </b:imports>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name=""AddChfByCardId"">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:properties>
+          <b:property name=""ns0:requestId"" xpath=""/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']"" />
+          <b:property distinguished=""true"" xpath=""/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']"" />
+        </b:properties>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs=""0"" name=""cardId"" nillable=""true"" type=""xs:string"" />
         <xs:element minOccurs=""0"" name=""chf"" type=""xs:decimal"" />
+        <xs:element name=""requestId"" type=""xs:string"" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name=""AddChfByCardIdResponse"">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:properties>
+          <b:property name=""ns0:requestId"" xpath=""/*[local-name()='AddChfByCardIdResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByCardIdResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']"" />
+        </b:properties>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q1=""http://schemas.datacontract.org/2004/07/DTO"" minOccurs=""0"" name=""AddChfByCardIdResult"" nillable=""true"" type=""q1:QuotaReturn"" />
@@ -45,6 +68,7 @@ namespace PrintSystemBiztalk {
       <xs:sequence>
         <xs:element minOccurs=""0"" name=""username"" nillable=""true"" type=""xs:string"" />
         <xs:element minOccurs=""0"" name=""chf"" type=""xs:decimal"" />
+        <xs:element name=""requestId"" type=""xs:string"" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -121,6 +145,8 @@ namespace PrintSystemBiztalk {
         }
         
         [Schema(@"http://tempuri.org/",@"AddChfByCardId")]
+        [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
+        [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "requestId", XPath = @"/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
         [System.SerializableAttribute()]
         [SchemaRoots(new string[] {@"AddChfByCardId"})]
         public sealed class AddChfByCardId : Microsoft.XLANGs.BaseTypes.SchemaBase {
@@ -156,6 +182,7 @@ namespace PrintSystemBiztalk {
         }
         
         [Schema(@"http://tempuri.org/",@"AddChfByCardIdResponse")]
+        [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByCardIdResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByCardIdResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']", XsdType = @"string")]
         [System.SerializableAttribute()]
         [SchemaRoots(new string[] {@"AddChfByCardIdResponse"})]
         public sealed class AddChfByCardIdResponse : Microsoft.XLANGs.BaseTypes.SchemaBase {
