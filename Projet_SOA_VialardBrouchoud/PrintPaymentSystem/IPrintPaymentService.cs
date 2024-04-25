@@ -12,9 +12,9 @@ namespace PrintPaymentSystem
     public interface IPrintPaymentService
     {
         [OperationContract]
-        QuotaReturn AddChfByCardId(string cardId, decimal chf);
+        QuotaReturn AddChfByCardId(Guid requestId, string cardId, decimal chf);
         [OperationContract]
-        QuotaReturn AddChfByUsername(string username, decimal chf);
+        QuotaReturn AddChfByUsername(Guid requestId, string username, decimal chf);
         [OperationContract]
         bool CreateUser(string username, string cardId);
         [OperationContract]

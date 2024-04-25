@@ -80,12 +80,12 @@ namespace DAL
                 using (SqlConnection cn = new SqlConnection(ConnectionString))
                 {
                     string query = @"UPDATE SAP 
-                                       SET Quota = Quota - @QuotaToAdd
+                                       SET Quota = Quota - @QuotaToRemove
                                        FROM SAP
                                        WHERE Username = @Username";
                     SqlCommand cmd = new SqlCommand(query, cn);
                     cmd.Parameters.AddWithValue("Username", username);
-                    cmd.Parameters.AddWithValue("QuotaToAdd", quota);
+                    cmd.Parameters.AddWithValue("QuotaToRemove", quota);
 
                     cn.Open();
 

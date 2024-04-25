@@ -24,9 +24,9 @@ namespace PrintPaymentSystem
         /// </summary>
         /// <param name="cardId">le numéro de la carte</param>
         /// <param name="chf">le montant en CHF à ajouter</param>
-        public QuotaReturn AddChfByCardId(string cardId, decimal chf)
+        public QuotaReturn AddChfByCardId(Guid requestId, string cardId, decimal chf)
         {
-            return manager.AddChfByCardId(cardId, chf);
+            return manager.AddChfByCardId(requestId, cardId, chf);
         }
 
         /// <summary>
@@ -34,9 +34,9 @@ namespace PrintPaymentSystem
         /// </summary>
         /// <param name="username">le nom de l'utilisateur</param>
         /// <param name="chf">le montant en CHF à ajouter</param>
-        public QuotaReturn AddChfByUsername(string username, decimal chf)
+        public QuotaReturn AddChfByUsername(Guid requestId, string username, decimal chf)
         {
-            return manager.AddChfByUsername(username, chf);
+            return manager.AddChfByUsername(requestId, username, chf);
         }
 
         public bool CreateUser(string username, string cardId)

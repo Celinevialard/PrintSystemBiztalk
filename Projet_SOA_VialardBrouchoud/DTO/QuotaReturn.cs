@@ -10,5 +10,7 @@ namespace DTO
     {
         public string username { get; set; }
         public int quota { get; set; }
+
+        public Guid requestId { get; set; }
     }
 }
