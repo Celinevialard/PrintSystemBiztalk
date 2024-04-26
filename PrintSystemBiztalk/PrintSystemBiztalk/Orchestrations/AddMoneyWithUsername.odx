@@ -95,15 +95,15 @@
                     <om:Element Type="Transform" OID="d3fb7ae7-96fd-4254-9318-d2424385f67f" ParentLink="ComplexStatement_Statement" LowerBound="46.1" HigherBound="48.1">
                         <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.AddMoneyWithUsername" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
-                        <om:Property Name="Name" Value="Transform_1" />
-                        <om:Property Name="Signal" Value="False" />
-                        <om:Element Type="MessagePartRef" OID="fc98c612-eb94-40dd-a45a-8b640d7fd78e" ParentLink="Transform_InputMessagePartRef" LowerBound="47.109" HigherBound="47.132">
+                        <om:Property Name="Name" Value="TransformAddMoneyWithUsername" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="73540af5-f498-4716-8d7c-4ab978e2f00d" ParentLink="Transform_InputMessagePartRef" LowerBound="47.109" HigherBound="47.132">
                             <om:Property Name="MessageRef" Value="msgAddMoneyWithUsername" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_1" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="dcccc5eb-9058-4cad-b66e-b09f8fe30765" ParentLink="Transform_OutputMessagePartRef" LowerBound="47.28" HigherBound="47.59">
+                        <om:Element Type="MessagePartRef" OID="864a370e-4d6d-498b-a391-7864bae3159a" ParentLink="Transform_OutputMessagePartRef" LowerBound="47.28" HigherBound="47.59">
                             <om:Property Name="MessageRef" Value="msgAddMoneyWithUsernameResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_2" />
@@ -117,7 +117,7 @@
                     </om:Element>
                 </om:Element>
                 <om:Element Type="Send" OID="7a4f4b37-2ce0-4e28-b095-7eb23fa5fd12" ParentLink="ServiceBody_Statement" LowerBound="49.1" HigherBound="51.1">
-                    <om:Property Name="PortName" Value="WSAddMoneyWithCardId" />
+                    <om:Property Name="PortName" Value="WSAddMoneyWithUsername" />
                     <om:Property Name="MessageName" Value="msgAddMoneyWithUsernameResponse" />
                     <om:Property Name="OperationName" Value="Operation_1" />
                     <om:Property Name="OperationMessageName" Value="Request" />
@@ -127,7 +127,7 @@
                 </om:Element>
                 <om:Element Type="Receive" OID="5a3ccf32-2d9f-457f-a413-40d6adefe346" ParentLink="ServiceBody_Statement" LowerBound="51.1" HigherBound="53.1">
                     <om:Property Name="Activate" Value="False" />
-                    <om:Property Name="PortName" Value="WSAddMoneyWithCardId" />
+                    <om:Property Name="PortName" Value="WSAddMoneyWithUsername" />
                     <om:Property Name="MessageName" Value="msgWSResponse" />
                     <om:Property Name="OperationName" Value="Operation_1" />
                     <om:Property Name="OperationMessageName" Value="Response" />
@@ -137,20 +137,20 @@
                 </om:Element>
                 <om:Element Type="Construct" OID="e48d768b-ebf8-4e4e-a13a-86c7e3ba6bac" ParentLink="ServiceBody_Statement" LowerBound="53.1" HigherBound="59.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
-                    <om:Property Name="Name" Value="ConstructMessage_2" />
+                    <om:Property Name="Name" Value="ConstructMsgToPrintSystem" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="Transform" OID="04f77dae-ca5a-480a-a6a6-b88b3366aa81" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="58.1">
-                        <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSResponse_to_Print" />
+                        <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSUsernameResponse_to_Print" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="WSResponseToPrint" />
-                        <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessagePartRef" OID="743bfc2e-e50f-4e66-aaa6-46270326b0d4" ParentLink="Transform_InputMessagePartRef" LowerBound="57.85" HigherBound="57.98">
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="1499233d-e491-47f0-8529-217b9afa3b4a" ParentLink="Transform_InputMessagePartRef" LowerBound="57.93" HigherBound="57.106">
                             <om:Property Name="MessageRef" Value="msgWSResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_3" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="d9382bee-51a4-4070-9a43-8a7fe708395b" ParentLink="Transform_OutputMessagePartRef" LowerBound="57.28" HigherBound="57.36">
+                        <om:Element Type="MessagePartRef" OID="1b568f0c-8def-48ef-8b50-06a06cb3b6e1" ParentLink="Transform_OutputMessagePartRef" LowerBound="57.28" HigherBound="57.36">
                             <om:Property Name="MessageRef" Value="msgPrint" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_4" />
@@ -199,8 +199,8 @@
                 <om:Property Name="Type" Value="PrintSystemBiztalk.PortType_12" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="WSAddMoneyWithCardId" />
-                <om:Property Name="Signal" Value="False" />
+                <om:Property Name="Name" Value="WSAddMoneyWithUsername" />
+                <om:Property Name="Signal" Value="True" />
                 <om:Element Type="LogicalBindingAttribute" OID="465a1ca1-3969-4e81-b526-1b4579464b93" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
@@ -227,7 +227,7 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="CorrelationSetRequestId" />
                 <om:Property Name="Signal" Value="True" />
-                <om:Element Type="StatementRef" OID="b9916a6c-a0a3-477d-8ee0-e5418cdb955e" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="50.86" HigherBound="50.120">
+                <om:Element Type="StatementRef" OID="b9916a6c-a0a3-477d-8ee0-e5418cdb955e" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="50.88" HigherBound="50.122">
                     <om:Property Name="Initializes" Value="True" />
                     <om:Property Name="Ref" Value="7a4f4b37-2ce0-4e28-b095-7eb23fa5fd12" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
@@ -297,7 +297,7 @@ module PrintSystemBiztalk
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
         port implements PortType_5 PayOnlineAndFaculties;
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
-        port uses PortType_12 WSAddMoneyWithCardId;
+        port uses PortType_12 WSAddMoneyWithUsername;
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
         port uses PortType_13 SendToPrintSystem;
         correlation CorrelationWSAddMoney CorrelationSetRequestId;
@@ -316,14 +316,14 @@ module PrintSystemBiztalk
                 transform (msgAddMoneyWithUsernameResponse) = PrintSystemBiztalk.Maps.AddMoneyWithUsername (msgAddMoneyWithUsername);
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("7a4f4b37-2ce0-4e28-b095-7eb23fa5fd12")]
-            send (WSAddMoneyWithCardId.Operation_1, msgAddMoneyWithUsernameResponse, initialize CorrelationSetRequestId);
+            send (WSAddMoneyWithUsername.Operation_1, msgAddMoneyWithUsernameResponse, initialize CorrelationSetRequestId);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("5a3ccf32-2d9f-457f-a413-40d6adefe346")]
-            receive (WSAddMoneyWithCardId.Operation_1, msgWSResponse);
+            receive (WSAddMoneyWithUsername.Operation_1, msgWSResponse);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("e48d768b-ebf8-4e4e-a13a-86c7e3ba6bac")]
             construct msgPrint
             {
                 [Microsoft.XLANGs.BaseTypes.DesignerPosition("04f77dae-ca5a-480a-a6a6-b88b3366aa81")]
-                transform (msgPrint) = PrintSystemBiztalk.Maps.WSResponse_to_Print (msgWSResponse);
+                transform (msgPrint) = PrintSystemBiztalk.Maps.WSUsernameResponse_to_Print (msgWSResponse);
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("b3b08d9e-6176-4782-bd5b-9b2a9cb37170")]
             send (SendToPrintSystem.Operation_1, msgPrint);

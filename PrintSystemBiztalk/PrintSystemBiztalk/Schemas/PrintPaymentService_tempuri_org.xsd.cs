@@ -9,6 +9,8 @@ namespace PrintSystemBiztalk {
     [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
     [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "requestId", XPath = @"/*[local-name()='AddChfByCardId' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
     [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByCardIdResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByCardIdResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']", XsdType = @"string")]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByUsername' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByUsernameResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByUsernameResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']", XsdType = @"string")]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"AddChfByCardId", @"AddChfByCardIdResponse", @"AddChfByUsername", @"AddChfByUsernameResponse", @"CreateUser", @"CreateUserResponse", @"RemoveQuota", @"RemoveQuotaResponse"})]
     [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PrintSystemBiztalk.PrintPaymentService_schemas_datacontract_org_2004_07_DTO", typeof(global::PrintSystemBiztalk.PrintPaymentService_schemas_datacontract_org_2004_07_DTO))]
@@ -64,6 +66,13 @@ namespace PrintSystemBiztalk {
     </xs:complexType>
   </xs:element>
   <xs:element name=""AddChfByUsername"">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:properties>
+          <b:property name=""ns0:requestId"" xpath=""/*[local-name()='AddChfByUsername' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']"" />
+        </b:properties>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs=""0"" name=""username"" nillable=""true"" type=""xs:string"" />
@@ -73,6 +82,13 @@ namespace PrintSystemBiztalk {
     </xs:complexType>
   </xs:element>
   <xs:element name=""AddChfByUsernameResponse"">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:properties>
+          <b:property name=""ns0:requestId"" xpath=""/*[local-name()='AddChfByUsernameResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByUsernameResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']"" />
+        </b:properties>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2=""http://schemas.datacontract.org/2004/07/DTO"" minOccurs=""0"" name=""AddChfByUsernameResult"" nillable=""true"" type=""q2:QuotaReturn"" />
@@ -218,6 +234,7 @@ namespace PrintSystemBiztalk {
         }
         
         [Schema(@"http://tempuri.org/",@"AddChfByUsername")]
+        [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByUsername' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://tempuri.org/']", XsdType = @"string")]
         [System.SerializableAttribute()]
         [SchemaRoots(new string[] {@"AddChfByUsername"})]
         public sealed class AddChfByUsername : Microsoft.XLANGs.BaseTypes.SchemaBase {
@@ -253,6 +270,7 @@ namespace PrintSystemBiztalk {
         }
         
         [Schema(@"http://tempuri.org/",@"AddChfByUsernameResponse")]
+        [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::PrintSystemBiztalk.PropertySchema.requestId), XPath = @"/*[local-name()='AddChfByUsernameResponse' and namespace-uri()='http://tempuri.org/']/*[local-name()='AddChfByUsernameResult' and namespace-uri()='http://tempuri.org/']/*[local-name()='requestId' and namespace-uri()='http://schemas.datacontract.org/2004/07/DTO']", XsdType = @"string")]
         [System.SerializableAttribute()]
         [SchemaRoots(new string[] {@"AddChfByUsernameResponse"})]
         public sealed class AddChfByUsernameResponse : Microsoft.XLANGs.BaseTypes.SchemaBase {

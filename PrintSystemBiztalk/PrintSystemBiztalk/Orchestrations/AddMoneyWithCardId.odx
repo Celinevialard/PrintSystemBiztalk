@@ -194,8 +194,8 @@
                     <om:Element Type="Transform" OID="1daf55ac-1709-4222-bde1-2ecfeca47f0d" ParentLink="ComplexStatement_Statement" LowerBound="71.1" HigherBound="73.1">
                         <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.AddMoneyWithCardId" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
-                        <om:Property Name="Name" Value="Transform_1" />
-                        <om:Property Name="Signal" Value="False" />
+                        <om:Property Name="Name" Value="TransformAddMoneyWithCardId" />
+                        <om:Property Name="Signal" Value="True" />
                         <om:Element Type="MessagePartRef" OID="40ad1de8-6840-4269-bd91-49fe53571b5e" ParentLink="Transform_InputMessagePartRef" LowerBound="72.105" HigherBound="72.126">
                             <om:Property Name="MessageRef" Value="msgAddMoneyWithCardId" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
@@ -236,20 +236,20 @@
                 </om:Element>
                 <om:Element Type="Construct" OID="69e421f9-36d3-4313-872d-6110eb18592f" ParentLink="ServiceBody_Statement" LowerBound="78.1" HigherBound="84.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
-                    <om:Property Name="Name" Value="ConstructMessage_1" />
-                    <om:Property Name="Signal" Value="False" />
+                    <om:Property Name="Name" Value="ConstructMsgToPrintSystem" />
+                    <om:Property Name="Signal" Value="True" />
                     <om:Element Type="Transform" OID="83f5d9a7-8801-4ae5-94cb-7a2bc15a40e6" ParentLink="ComplexStatement_Statement" LowerBound="81.1" HigherBound="83.1">
                         <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSResponse_to_Print" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="WSResponseToPrint" />
                         <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessagePartRef" OID="7a4fa787-6f82-4829-b23b-37520d617947" ParentLink="Transform_InputMessagePartRef" LowerBound="82.85" HigherBound="82.98">
+                        <om:Element Type="MessagePartRef" OID="397218ad-14e2-48c5-846e-cba86396fed1" ParentLink="Transform_InputMessagePartRef" LowerBound="82.85" HigherBound="82.98">
                             <om:Property Name="MessageRef" Value="msgWSResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_3" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="eb278673-51b8-4853-998a-f3c4de312669" ParentLink="Transform_OutputMessagePartRef" LowerBound="82.28" HigherBound="82.36">
+                        <om:Element Type="MessagePartRef" OID="81a8ad1e-9fbd-4f3c-bb67-4c81c618345b" ParentLink="Transform_OutputMessagePartRef" LowerBound="82.28" HigherBound="82.36">
                             <om:Property Name="MessageRef" Value="msgPrint" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_4" />
