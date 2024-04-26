@@ -171,6 +171,11 @@
       <Namespace>PrintSystemBiztalk.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
+    <XLang Include="Orchestrations\AddMoneyWithUsername.odx">
+      <TypeName>AddMoneyWithUsername</TypeName>
+      <Namespace>PrintSystemBiztalk.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
     <Content Include="PrintPaymentService.BindingInfo.xml" />
     <XLang Include="PrintPaymentService.odx">
       <TypeName>PrintPaymentService</TypeName>
