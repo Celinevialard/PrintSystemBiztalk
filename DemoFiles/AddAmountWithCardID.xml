@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<ns0:AddMoney xmlns:ns0="http://PrintSystemBiztalk.Schemas.PaymentDBAddMoney">
+
+<Amount>10</Amount>
+
+<CardID>HXC459VS</CardID>
+
+</ns0:AddMoney>
