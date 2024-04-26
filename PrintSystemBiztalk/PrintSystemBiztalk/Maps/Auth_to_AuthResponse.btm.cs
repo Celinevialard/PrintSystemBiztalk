@@ -16,7 +16,7 @@ namespace PrintSystemBiztalk.Maps {
       <RequestIdentification>
         <xsl:value-of select=""RequestIdentification/text()"" />
       </RequestIdentification>
-      <xsl:variable name=""var:v1"" select=""userCSharp:RandomBoolean()"" />
+      <xsl:variable name=""var:v1"" select=""userCSharp:Authenticate(string(Password/text()))"" />
       <IsValid>
         <xsl:value-of select=""$var:v1"" />
       </IsValid>
@@ -27,10 +27,12 @@ namespace PrintSystemBiztalk.Maps {
 //that concatenates two inputs. Change the number of parameters of
 //this function to be equal to the number of inputs connected to this functoid.*/
 
-public bool RandomBoolean()
+public bool Authenticate(string Password)
 {
-    //return new System.Random().NextDouble() > 0.75;
-    return true;
+    if (Password == ""pwd"")
+        return true;
+
+    return false;
 }
 
 
