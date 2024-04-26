@@ -227,6 +227,13 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="CorrelationSetRequestId" />
                 <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="b9916a6c-a0a3-477d-8ee0-e5418cdb955e" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="50.86" HigherBound="50.120">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="7a4f4b37-2ce0-4e28-b095-7eb23fa5fd12" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
             </om:Element>
             <om:Element Type="MessageDeclaration" OID="1afe5fd3-d519-4ed7-a53d-b57666c404c3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
                 <om:Property Name="Type" Value="PrintSystemBiztalk.Schemas.PaymentDBAddMoney" />
@@ -309,7 +316,7 @@ module PrintSystemBiztalk
                 transform (msgAddMoneyWithUsernameResponse) = PrintSystemBiztalk.Maps.AddMoneyWithUsername (msgAddMoneyWithUsername);
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("7a4f4b37-2ce0-4e28-b095-7eb23fa5fd12")]
-            send (WSAddMoneyWithCardId.Operation_1, msgAddMoneyWithUsernameResponse);
+            send (WSAddMoneyWithCardId.Operation_1, msgAddMoneyWithUsernameResponse, initialize CorrelationSetRequestId);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("5a3ccf32-2d9f-457f-a413-40d6adefe346")]
             receive (WSAddMoneyWithCardId.Operation_1, msgWSResponse);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("e48d768b-ebf8-4e4e-a13a-86c7e3ba6bac")]
