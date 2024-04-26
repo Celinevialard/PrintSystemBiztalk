@@ -18,10 +18,10 @@
                 <om:Property Name="Name" Value="Operation_1" />
                 <om:Property Name="Signal" Value="False" />
                 <om:Element Type="MessageRef" OID="1facd37c-f14c-482a-b6aa-ec073bc32c78" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.38">
-                    <om:Property Name="Ref" Value="PrintSystemBiztalk.Schemas.PaymentDBAddMoney" />
+                    <om:Property Name="Ref" Value="PrintSystemBiztalk.Schemas.PayOnlineAddMoney" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="Request" />
-                    <om:Property Name="Signal" Value="False" />
+                    <om:Property Name="Signal" Value="True" />
                 </om:Element>
             </om:Element>
         </om:Element>
@@ -236,7 +236,7 @@
                 </om:Element>
             </om:Element>
             <om:Element Type="MessageDeclaration" OID="1afe5fd3-d519-4ed7-a53d-b57666c404c3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
-                <om:Property Name="Type" Value="PrintSystemBiztalk.Schemas.PaymentDBAddMoney" />
+                <om:Property Name="Type" Value="PrintSystemBiztalk.Schemas.PayOnlineAddMoney" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="msgAddMoneyWithUsername" />
@@ -274,7 +274,7 @@ module PrintSystemBiztalk
     {
         oneway Operation_1
         {
-            Schemas.PaymentDBAddMoney
+            Schemas.PayOnlineAddMoney
         };
     };
     internal porttype PortType_12
@@ -301,7 +301,7 @@ module PrintSystemBiztalk
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
         port uses PortType_13 SendToPrintSystem;
         correlation CorrelationWSAddMoney CorrelationSetRequestId;
-        message Schemas.PaymentDBAddMoney msgAddMoneyWithUsername;
+        message Schemas.PayOnlineAddMoney msgAddMoneyWithUsername;
         message PrintPaymentService_tempuri_org.AddChfByUsername msgAddMoneyWithUsernameResponse;
         message PrintPaymentService_tempuri_org.AddChfByUsernameResponse msgWSResponse;
         message Schemas.PrintSystemAddQuota msgPrint;
