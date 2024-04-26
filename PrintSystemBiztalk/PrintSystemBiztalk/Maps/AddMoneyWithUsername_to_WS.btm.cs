@@ -6,7 +6,7 @@ namespace PrintSystemBiztalk.Maps {
     public sealed class AddMoneyWithUsername : global::Microsoft.XLANGs.BaseTypes.TransformBase {
         
         private const string _strMap = @"<?xml version=""1.0"" encoding=""UTF-16""?>
-<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0"" version=""1.0"" xmlns:ns0=""http://tempuri.org/"" xmlns:ns1=""http://schemas.datacontract.org/2004/07/DTO"" xmlns:s0=""http://PrintSystemBiztalk.Schemas.PayOnlineAddMoney"">
+<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 userCSharp"" version=""1.0"" xmlns:ns0=""http://tempuri.org/"" xmlns:ns1=""http://schemas.datacontract.org/2004/07/DTO"" xmlns:s0=""http://PrintSystemBiztalk.Schemas.PayOnlineAddMoney"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
   <xsl:output omit-xml-declaration=""yes"" method=""xml"" version=""1.0"" />
   <xsl:template match=""/"">
     <xsl:apply-templates select=""/s0:AddMoney"" />
@@ -19,8 +19,21 @@ namespace PrintSystemBiztalk.Maps {
       <ns0:chf>
         <xsl:value-of select=""Amount/text()"" />
       </ns0:chf>
+      <xsl:variable name=""var:v1"" select=""userCSharp:GenerateGUID()"" />
+      <ns0:requestId>
+        <xsl:value-of select=""$var:v1"" />
+      </ns0:requestId>
     </ns0:AddChfByUsername>
   </xsl:template>
+  <msxsl:script language=""C#"" implements-prefix=""userCSharp""><![CDATA[
+public string GenerateGUID()
+{
+    System.Guid temp = System.Guid.NewGuid();
+    return temp.ToString();
+}
+
+
+]]></msxsl:script>
 </xsl:stylesheet>";
         
         private const int _useXSLTransform = 0;

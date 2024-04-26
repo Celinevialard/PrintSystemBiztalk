@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<ns0:AddMoney xmlns:ns0="http://PrintSystemBiztalk.Schemas.PayOnlineAddMoney">
+
+<Amount>20</Amount>
+
+<Username>jean</Username>
+
+</ns0:AddMoney>

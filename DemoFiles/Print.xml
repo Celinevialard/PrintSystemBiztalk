@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<ns0:Print xmlns:ns0="http://PrintSystemBiztalk.Schemas.PrintSystemPrint">
+
+<Username>jean</Username>
+
+<Password>pwd</Password>
+
+<Quota>10</Quota>
+
+</ns0:Print>
