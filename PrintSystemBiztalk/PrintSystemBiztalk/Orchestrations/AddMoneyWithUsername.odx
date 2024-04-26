@@ -143,14 +143,14 @@
                         <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSUsernameResponse_to_Print" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="WSResponseToPrint" />
-                        <om:Property Name="Signal" Value="False" />
-                        <om:Element Type="MessagePartRef" OID="1499233d-e491-47f0-8529-217b9afa3b4a" ParentLink="Transform_InputMessagePartRef" LowerBound="57.93" HigherBound="57.106">
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="c821c938-db03-416d-b1ef-2424a1e3d84e" ParentLink="Transform_InputMessagePartRef" LowerBound="57.93" HigherBound="57.106">
                             <om:Property Name="MessageRef" Value="msgWSResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_3" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="1b568f0c-8def-48ef-8b50-06a06cb3b6e1" ParentLink="Transform_OutputMessagePartRef" LowerBound="57.28" HigherBound="57.36">
+                        <om:Element Type="MessagePartRef" OID="388cd3ec-9c3f-4922-9681-171179eb6ba6" ParentLink="Transform_OutputMessagePartRef" LowerBound="57.28" HigherBound="57.36">
                             <om:Property Name="MessageRef" Value="msgPrint" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_4" />

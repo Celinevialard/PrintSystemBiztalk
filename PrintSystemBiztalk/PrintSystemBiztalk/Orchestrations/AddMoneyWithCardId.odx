@@ -239,17 +239,17 @@
                     <om:Property Name="Name" Value="ConstructMsgToPrintSystem" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="Transform" OID="83f5d9a7-8801-4ae5-94cb-7a2bc15a40e6" ParentLink="ComplexStatement_Statement" LowerBound="81.1" HigherBound="83.1">
-                        <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSResponse_to_Print" />
+                        <om:Property Name="ClassName" Value="PrintSystemBiztalk.Maps.WSCardIdResponse_to_Print" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="WSResponseToPrint" />
-                        <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessagePartRef" OID="397218ad-14e2-48c5-846e-cba86396fed1" ParentLink="Transform_InputMessagePartRef" LowerBound="82.85" HigherBound="82.98">
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="3c50c5e8-24e3-40d2-ab39-6607745aba16" ParentLink="Transform_InputMessagePartRef" LowerBound="82.91" HigherBound="82.104">
                             <om:Property Name="MessageRef" Value="msgWSResponse" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_3" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
-                        <om:Element Type="MessagePartRef" OID="81a8ad1e-9fbd-4f3c-bb67-4c81c618345b" ParentLink="Transform_OutputMessagePartRef" LowerBound="82.28" HigherBound="82.36">
+                        <om:Element Type="MessagePartRef" OID="04db964b-7d14-440b-aee0-2dc6c85d789a" ParentLink="Transform_OutputMessagePartRef" LowerBound="82.28" HigherBound="82.36">
                             <om:Property Name="MessageRef" Value="msgPrint" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="MessagePartReference_4" />
@@ -417,7 +417,7 @@ module PrintSystemBiztalk
             construct msgPrint
             {
                 [Microsoft.XLANGs.BaseTypes.DesignerPosition("83f5d9a7-8801-4ae5-94cb-7a2bc15a40e6")]
-                transform (msgPrint) = PrintSystemBiztalk.Maps.WSResponse_to_Print (msgWSResponse);
+                transform (msgPrint) = PrintSystemBiztalk.Maps.WSCardIdResponse_to_Print (msgWSResponse);
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("fb43079d-b1a0-4075-8df4-7c1713e041b4")]
             send (SendPrintSystem.Operation_1, msgPrint);

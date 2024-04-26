@@ -166,11 +166,6 @@
       <Namespace>PrintSystemBiztalk.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
-    <Map Include="Maps\WSCardIdResponse_to_Print.btm">
-      <TypeName>WSResponse_to_Print</TypeName>
-      <Namespace>PrintSystemBiztalk.Maps</Namespace>
-      <SubType>Task</SubType>
-    </Map>
     <XLang Include="Orchestrations\AddMoneyWithUsername.odx">
       <TypeName>AddMoneyWithUsername</TypeName>
       <Namespace>PrintSystemBiztalk.Orchestrations</Namespace>
@@ -178,6 +173,11 @@
     </XLang>
     <Map Include="Maps\WSUsernameResponse_to_Print.btm">
       <TypeName>WSUsernameResponse_to_Print</TypeName>
+      <Namespace>PrintSystemBiztalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\WSCardIdResponse_to_Print.btm">
+      <TypeName>WSCardIdResponse_to_Print</TypeName>
       <Namespace>PrintSystemBiztalk.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
